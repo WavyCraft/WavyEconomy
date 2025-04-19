@@ -20,7 +20,7 @@ final class WavyEconomyAPI {
     protected int $startingAmount;
 
     public function __construct() {
-        $dataFolder = WavyEconomy::getInstance()->dataFolder();
+        $dataFolder = WavyEconomy::getInstance()->getDataFolder();
 
         @mkdir($dataFolder . "database/");
         $this->config = new Config($dataFolder . "database/balances.json");
