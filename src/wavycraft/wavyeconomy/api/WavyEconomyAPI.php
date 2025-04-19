@@ -17,7 +17,7 @@ final class WavyEconomyAPI {
 
     protected Config $config;
 
-    protected int startingAmount;
+    protected int $startingAmount;
 
     public function __construct() {
         $dataFolder = WavyEconomy::getInstance()->dataFolder();
