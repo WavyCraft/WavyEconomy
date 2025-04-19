@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace wavycraft\wavyeconomy\command;
+namespace wavycraft\wavyeconomy\commands;
 
 use pocketmine\command\CommandSender;
 
