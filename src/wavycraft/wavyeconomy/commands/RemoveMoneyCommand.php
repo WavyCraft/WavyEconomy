@@ -23,8 +23,9 @@ class RemoveMoneyCommand extends BaseCommand {
 
     protected function prepare() : void{
         $this->setPermission("wavyeconomy.removemoney");
-        $this->registerArgument(0, new RawStringArgument("player", true));
-        $this->registerArgument(1, new IntegerArgument("amount", true));
+        
+        $this->registerArgument(0, new RawStringArgument("player"));
+        $this->registerArgument(1, new IntegerArgument("amount"));
     }
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args) : void{
