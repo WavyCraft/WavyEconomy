@@ -56,6 +56,6 @@ class AddMoneyCommand extends BaseCommand {
         }
 
         $api->addMoney($targetName, $amount);
-        $sender->sendMessage((string) Messages($config, "add-money-message", ["{name}", "{amount}"], [ucfirst($targetName), number_format($amount)]));
+        $sender->sendMessage((string) new Messages($config, "add-money-message", ["{name}", "{amount}"], [ucfirst($targetName), number_format($amount)]));
     }
 }
