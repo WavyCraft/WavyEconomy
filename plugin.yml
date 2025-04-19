@@ -1,0 +1,19 @@
+name: WavyEconomy
+version: 1.0.0
+author: Terpz710
+api: 5.3.0
+main: wavycraft\wavyeconomy\WavyEconomy
+
+permissions:
+  wavyeconomy.balance:
+    default: true
+  wavyeconomy.seebalance:
+    default: true
+  wavyeconomy.pay:
+    default: true
+  wavyeconomy.addmoney:
+    default: op
+  wavyeconomy.removemoney:
+    default: op
+  wavyeconomy.setmoney:
+    default: op

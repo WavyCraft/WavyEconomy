@@ -1,0 +1,54 @@
+# Made by Terpz710 :p
+
+# You may use "&" for color fomatting
+
+# Message when you check your balance
+balance-message: "Balance: &a${balance}"
+
+# Message when a player doesnt have an account
+no-account-message: "{name} §cdoes not have an account!"
+
+# Message when a player inputs a negative number
+negative-number-message: "&cAmount must be greater than 0!"
+
+# Message when a player doesnt have enough money
+not-enough-money-message: "&cYou don't have enough money!"
+
+# Message showing how to use command
+see-balance-usage-message: "&cUsage: /seebalance <player>"
+
+# Message displaying a players balance
+see-balance-message: "{name}'s balance: &a${balance}"
+
+# Message showing how to use command
+pay-usage-message: "&cUsage: /pay <player> <amount>"
+
+# Message when a player tries to pay himself
+cannot-pay-yourself-message: "&cYou can't pay yourself!"
+
+# Message when you successfully paid a player
+paid-money-message: "You paid &e{name} &a${amount}"
+
+# Message when you recieve payment
+recieved-money-message: "You received &a${amount} &ffrom §e{name}"
+
+# Message showing how to use command
+add-money-usage-message: "&cUsage: /addmoney <player> <amount>"
+
+# Message when a player adds money to a balance
+add-money-message: "Successfully added &a${amount} §fto &e{name}"
+
+# Message showing how to use command
+remove-money-usage-message: "&cUsage: /removemoney <player> <amount>"
+
+# Message when the player doesnt have enough money to remove
+not-enough-money-to-remove-message: "&c{name} does not have enough money to remove that amount!"
+
+# Message when a player removes money from a balance
+removed-money-message: "Successfully removed &a${number} &ffrom &e{name}"
+
+# Message showing how to use command
+set-money-usage-message: "&cUsage: /setmoney <player> <amount>"
+
+# Message when a player sets a players balance
+set-money-message: "Successfully set &e{name}'s&f balance to &a${amount}"
