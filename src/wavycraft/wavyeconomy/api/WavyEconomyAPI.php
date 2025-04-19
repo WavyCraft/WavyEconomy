@@ -15,15 +15,17 @@ use wavycraft\wavyeconomy\event\BalanceChangeEvent;
 final class WavyEconomyAPI {
     use SingletonTrait;
 
-    private Config $config;
+    protected Config $config;
 
-    const STARTING_AMOUNT = WavyEconomy::getInstance()->getConfig()->get("starting-amount");
+    protected int startingAmount;
 
     public function __construct() {
         $dataFolder = WavyEconomy::getInstance()->dataFolder();
 
         @mkdir($dataFolder . "database/");
         $this->config = new Config($dataFolder . "database/balances.json");
+
+        $this->startingAmount = WavyEconomy::getInstance()->getConfig()->get("starting-amount");
     }
 
     public function hasAccount($player) : bool{
@@ -44,7 +46,7 @@ final class WavyEconomyAPI {
         $player = strtolower($player);
 
         if (!$this->hasAccount($player)) {
-            $this->config->set($player, self::STARTING_AMOUNT);
+            $this->config->set($player, $this->startingAmount);
             $this->config->save();
         }
     }
