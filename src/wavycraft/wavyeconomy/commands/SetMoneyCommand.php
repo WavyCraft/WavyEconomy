@@ -16,6 +16,7 @@ use wavycraft\wavyeconomy\api\WavyEconomyAPI;
 use terpz710\messages\Messages;
 
 use CortexPE\Commando\BaseCommand;
+use CortexPE\Commando\args\IntegerArgument;
 use CortexPE\Commando\args\RawStringArgument;
 
 class SetMoneyCommand extends BaseCommand {
@@ -23,8 +24,8 @@ class SetMoneyCommand extends BaseCommand {
     protected function prepare() : void{
         $this->setPermission("wavyeconomy.setmoney");
 
-        $this->registerArgument(0, new RawStringArgument("player", true));
-        $this->registerArgument(1, new IntegerArgument("amount", true));
+        $this->registerArgument(0, new RawStringArgument("player"));
+        $this->registerArgument(1, new IntegerArgument("amount"));
     }
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args) : void{
