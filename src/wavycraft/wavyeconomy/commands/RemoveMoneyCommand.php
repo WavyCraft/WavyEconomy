@@ -57,11 +57,11 @@ class RemoveMoneyCommand extends BaseCommand {
         }
 
         if ($api->getBalance($targetName) < $amount) {
-            $sender->sendMessage((string) Messages($config, "not-enough-money-to-remove-message", ["{name}"], [ucfirst($targetName)]));
+            $sender->sendMessage((string) new Messages($config, "not-enough-money-to-remove-message", ["{name}"], [ucfirst($targetName)]));
             return;
         }
 
         $api->removeMoney($targetName, $amount);
-        $sender->sendMessage((string) Messages($config, "removed-money-message", ["{name}", "{amount}"], [ucfirst($targetName), number_format($amount)]));
+        $sender->sendMessage((string) new Messages($config, "removed-money-message", ["{name}", "{amount}"], [ucfirst($targetName), number_format($amount)]));
     }
 }
