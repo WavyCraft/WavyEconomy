@@ -53,6 +53,7 @@ class SetMoneyCommand extends BaseCommand {
 
         if (!$api->hasAccount($targetName)) {
             $sender->sendMessage((string) new Messages($config, "no-account-message", ["{name}"], [$args["player"]]));
+            return;
         }
 
         $api->setMoney($targetName, $amount);
