@@ -67,6 +67,11 @@ final class WavyEconomyAPI {
         }
 
         $player = strtolower($player);
+
+        if (!$this->hasAccount($player)) {
+            return;
+        }
+
         $current = $this->getBalance($player);
         $event = new BalanceChangeEvent($player);
 
@@ -81,6 +86,11 @@ final class WavyEconomyAPI {
         }
 
         $player = strtolower($player);
+
+        if (!$this->hasAccount($player)) {
+            return;
+        }
+
         $current = $this->getBalance($player);
         $event = new BalanceChangeEvent($player);
 
@@ -95,6 +105,11 @@ final class WavyEconomyAPI {
         }
 
         $player = strtolower($player);
+
+        if (!$this->hasAccount($player)) {
+            return;
+        }
+
         $event = new BalanceChangeEvent($player);
 
         $this->config->set($player, $amount);
