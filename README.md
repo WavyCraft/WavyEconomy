@@ -44,7 +44,7 @@ $api->addMoney($player->getName(), 100);
 ```php
 /** $player is instanceof Player::class */
 
-$api->removeMoney($player->getName(), 100)
+$api->removeMoney($player->getName(), 100);
 ```
 
 **How to set a players balance:**
@@ -52,4 +52,20 @@ $api->removeMoney($player->getName(), 100)
 /** $player is instanceof Player::class */
 
 $api->setMoney($player->getName(), 100);
+```
+
+**Example usage:**
+```php
+/** $player is instanceof Player::class */
+
+/** Checks to see if a player has an account */
+if (!$api->hasBalance($player->getName()) {
+    $player->sendMessage("Player does not own a balance!");
+    return;
+}
+
+/** If a player has a balance continue to add the money */
+$api->addMoney($player->getName(), 100);
+
+Check out AddMoneyCommand.php for a better example!
 ```
