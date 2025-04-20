@@ -45,7 +45,7 @@ remove-money-usage-message: "&cUsage: /removemoney <player> <amount>"
 not-enough-money-to-remove-message: "&c{name} does not have enough money to remove that amount!"
 
 # Message when a player removes money from a balance
-removed-money-message: "Successfully removed &a${number} &ffrom &e{name}"
+removed-money-message: "Successfully removed &a${amount} &ffrom &e{name}"
 
 # Message showing how to use command
 set-money-usage-message: "&cUsage: /setmoney <player> <amount>"
