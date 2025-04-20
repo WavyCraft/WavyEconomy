@@ -70,7 +70,7 @@ class PayCommand extends BaseCommand {
         $api->removeMoney($senderName, $amount);
         $api->addMoney($targetName, $amount);
 
-        $sender->sendMessage((string) new Messages($config, "paid-money-message", ["{name}", "{amount}"], [ucfirst($targetName), number_format($amount))]));
+        $sender->sendMessage((string) new Messages($config, "paid-money-message", ["{name}", "{amount}"], [ucfirst($targetName), number_format($amount)]));
         
         $targetPlayer = $sender->getServer()->getPlayerExact($targetName);
         if ($targetPlayer instanceof Player) {
