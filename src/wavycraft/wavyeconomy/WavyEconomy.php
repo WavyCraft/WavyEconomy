@@ -14,7 +14,6 @@ use wavycraft\wavyeconomy\commands\AddMoneyCommand;
 use wavycraft\wavyeconomy\commands\RemoveMoneyCommand;
 use wavycraft\wavyeconomy\commands\SetMoneyCommand;
 
-
 use CortexPE\Commando\PacketHooker;
 
 class WavyEconomy extends PluginBase {
