@@ -29,7 +29,7 @@ class TopBalanceCommand extends BaseCommand {
 
         arsort($balances);
 
-        $sender->sendMessage(TextFormat::GOLD . "--- Top 10 Balances ---");
+        $sender->sendMessage("--- Top 10 Balances ---");
         $i = 1;
         foreach ($balances as $player => $balance) {
             $sender->sendMessage("§7" . $i . ". §f" . ucfirst($player) . " - " . "§a$" . number_format($balance));
