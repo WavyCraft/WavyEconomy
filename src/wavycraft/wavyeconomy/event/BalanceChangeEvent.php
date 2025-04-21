@@ -12,6 +12,7 @@ class BalanceChangeEvent extends Event {
         $this->player = $player;
     }
 
+    /** This returns the playername */
     public function getPlayer(){
         return $this->player;
     }
