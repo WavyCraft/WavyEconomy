@@ -52,3 +52,9 @@ set-money-usage-message: "&cUsage: /setmoney <player> <amount>"
 
 # Message when a player sets a players balance
 set-money-message: "Successfully set &e{name}'s&f balance to &a${amount}"
+
+# Top header for the leaderboard
+top-balance-message-1: "--- Top 10 Balances ---"
+
+# Leaderboard
+top-balance-message-2: "&7{position}. &f{name} - &a${balance}"
