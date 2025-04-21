@@ -38,7 +38,7 @@ class TopBalanceCommand extends BaseCommand {
         $sender->sendMessage((string) new Messages($config, "top-balance-message-1"));
         $i = 1;
         foreach ($balances as $player => $balance) {
-            $sender->sendMessage((string) new Messages($config, "top-balance-message-2", ["{position}", "{name}", "{balance}"], [$i, ucfirst($player), number_format($balance)]);
+            $sender->sendMessage((string) new Messages($config, "top-balance-message-2", ["{position}", "{name}", "{balance}"], [$i, ucfirst($player), number_format($balance)]));
             if (++$i > 10) break;
         }
     }
