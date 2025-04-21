@@ -7,6 +7,7 @@ Easy to use API!
 - Check your or another players balance
 - Pay players
 - Add, remove and set money (operators only)
+- Leaderboard (Top 10 balances)
 - ScoreHud support
 - Configurable messages. Check out `messages.yml`
 
