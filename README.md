@@ -8,6 +8,12 @@ Easy to use API!
 - Pay players
 - Add, remove and set money (operators only)
 - ScoreHud support
+- Configurable messages. Check out `messages.yml`
+
+# ScoreHud
+This plugin supports ScoreHud!
+
+Check out [WavyEconomyScore](https://github.com/WavyCraft/WavyEconomyScore)!
 
 # API
 **How to get the instance:**
