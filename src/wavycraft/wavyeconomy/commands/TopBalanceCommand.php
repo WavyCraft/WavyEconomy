@@ -8,8 +8,12 @@ use pocketmine\command\CommandSender;
 
 use pocketmine\player\Player;
 
+use pocketmine\utils\Config;
+
 use wavycraft\wavyeconomy\WavyEconomy;
 use wavycraft\wavyeconomy\api\WavyEconomyAPI;
+
+use terpz710\messages\Messages;
 
 use CortexPE\Commando\BaseCommand;
 
@@ -20,6 +24,8 @@ class TopBalanceCommand extends BaseCommand {
     }
 
     public function onRun(CommandSender $sender, string $aliasUsed, array $args) : void{
+        $config = new Config(WavyEconomy::getInstance()->getDataFolder() . "messages.yml");
+        
         if (!$sender instanceof Player) {
             $sender->sendMessage("This command can only be used in-game!");
             return;
@@ -29,10 +35,10 @@ class TopBalanceCommand extends BaseCommand {
 
         arsort($balances);
 
-        $sender->sendMessage("--- Top 10 Balances ---");
+        $sender->sendMessage((string) new Messages($config, "top-balance-message-1"));
         $i = 1;
         foreach ($balances as $player => $balance) {
-            $sender->sendMessage("§7" . $i . ". §f" . ucfirst($player) . " - " . "§a$" . number_format($balance));
+            $sender->sendMessage((string) new Messages($config, "top-balance-message-2", ["{position}", "{name}", "{balance}"], [$i, ucfirst($player), number_format($balance)]);
             if (++$i > 10) break;
         }
     }
