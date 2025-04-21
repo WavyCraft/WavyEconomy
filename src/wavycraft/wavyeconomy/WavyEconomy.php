@@ -9,6 +9,7 @@ use pocketmine\plugin\PluginBase;
 use wavycraft\wavyeconomy\api\WavyEconomyAPI;
 use wavycraft\wavyeconomy\commands\BalanceCommand;
 use wavycraft\wavyeconomy\commands\SeeBalanceCommand;
+use wavycraft\wavyeconomy\commands\TopBalanceCommand;
 use wavycraft\wavyeconomy\commands\PayCommand;
 use wavycraft\wavyeconomy\commands\AddMoneyCommand;
 use wavycraft\wavyeconomy\commands\RemoveMoneyCommand;
@@ -35,6 +36,7 @@ class WavyEconomy extends PluginBase {
         $this->getServer()->getCommandMap()->registerAll("WavyEconomy", [
             new BalanceCommand($this, "balance", "Check your balance"),
             new SeeBalanceCommand($this, "seebalance", "Check a players balance"),
+            new TopBalanceCommand($this, "topbalance", "See the richest players"),
             new PayCommand($this, "pay", "Pay a player"),
             new AddMoneyCommand($this, "addmoney", "Add money to a players balance"),
             new RemoveMoneyCommand($this, "removemoney", "Remove money from a players balance"),
