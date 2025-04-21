@@ -61,6 +61,10 @@ final class WavyEconomyAPI {
         return (int) $this->config->get($player);
     }
 
+    public function getAllBalances() : array{
+        return $this->config->getAll();
+    }
+
     public function addMoney($player, int $amount) : void{
         if ($player instanceof Player) {
             $player = $player->getName();
