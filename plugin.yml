@@ -9,6 +9,8 @@ permissions:
     default: true
   wavyeconomy.seebalance:
     default: true
+  wavyeconomy.topbalance:
+    default: true
   wavyeconomy.pay:
     default: true
   wavyeconomy.addmoney:
